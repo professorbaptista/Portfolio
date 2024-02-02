@@ -1,0 +1,143 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #426938;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header{
+    height: 300px;
+    background-image: linear-gradient(to right, rgba(123, 43, 56), rgba(21, 31, 57));
+} */
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(121, 70, 70, 0.8); 
+    width: 400px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    padding: 1.2rem;
+}
+
+fieldset{
+    border: 2px solid blue;
+    padding: 1.2rem;
+    border-radius: 12px;
+}
+
+legend{
+    border: 2px solid red;
+    padding: 8px;
+    text-align: center;
+    color: #fff;
+    background-color: #f034;
+    border-radius: 12px;
+    font-size: 1.2rem
+}
+
+.input-box{
+    position: relative;
+
+}
+
+.input-label{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: all .8s ease;
+    font-size: 1.2rem;
+    color: #fff;
+
+}
+
+.input-user{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    color: #fff;
+}
+.input-user:focus ~ .input-label, .input-user:valid ~.input-label{
+    top: -20px;
+    font-size: 16px;
+    color: #44a22c;
+
+}
+/*Label do sexo*/
+label{
+    color: #fff;
+    font-size: 1.2rem;
+    
+}
+p{
+    color: #000fff;
+    font-size: 1.2rem;
+    }
+
+#data{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.data{
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    outline: none;
+    width: 38%;
+    
+   
+}
+
+#csubmit{
+    background-color: #426938;
+    padding: 6px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+
+#csubmit:hover{
+    background-image: linear-gradient(to right, rgba(133, 12, 123), rgba(17,96,54));
+    font-size: 1rem;
+    transition: all .5s ease-in-out;
+}
+
+#btn-voltar{
+    position: absolute;  
+    /* bottom: 100%; */
+    right: 3%;
+  
+  
+}
+
+button{
+    background-image: linear-gradient(to top, rgba(123,12, 45), rgba(12, 155,0.2));
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #000fff;
+    transition: all .5s ease-in-out;
+}

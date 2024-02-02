@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-Pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projecto Quociente de inteligência</title>
+        <link rel="stylesheet" href="projeto3.css">
+        <script src="estilo.js"></script>
+    </head>
+    <body>
+        <h2>José Baptista, Professor, Psicologo e Desenvolvidor web.</h2>
+    
+        <div class="container">
+    
+        <div class="parte-1">
+            <h3>Calcule o seu Q.I</h3>
+            <h4>Clique para começar  </h4>
+        <button onclick="go(1, 2)">Iniciar</button>
+        </div>
+    
+        <div class="parte-2">
+            <h4>
+                Calculadora do Q.I (Quociente de inteligência)  
+    
+            </h4>
+            <hr>
+    
+            <p> 
+                <label for="mental"> Digite a sua idade mental:
+                <input type="number" id="mental" placeholder="Digite a sua idade mental">
+            </label> </p><br>
+            <p>
+                <label for="crono"> Digite a sua idade cronológica:
+                    <input type="number" id="crono" placeholder="Digite a sua idade cronológica">
+                </label>
+            </p><br>
+            <button onclick="calcular()"> Calcular </button> <br>
+    
+        </div>
+        
+        <div class="parte-3">
+            <h2>Resultado</h2>
+            <p id="resp">...</p>
+            <button id="btn" onclick="go(3, 2)">Recalcular</button>
+            <button id="btn" onclick="go(3, 1)">Finalizar</button>
+        </div>
+        </div>
+        <div id="btn-voltar">
+            <a href="project.html"><button>Voltar</button></a>
+        </div>
+    </body>
+    <script>
+        go = (currentStep, nextStep) => {
+const parte1 = document.querySelector ('.parte-1')
+const parte2 = document.querySelector ('.parte-2')
+const parte3 = document.querySelector ('.parte-3')
+let dNone, dBlock;
+
+ if(currentStep == 1){
+     dNone = parte1
+ }
+ else if(currentStep == 2){
+     dNone = parte2
+ }
+ else
+ {
+     dNone = parte3
+ }
+ dNone.style.display = 'none'
+
+ if(nextStep == 1){
+     dBlock = parte1
+ }
+ else if(nextStep == 2){
+     dBlock = parte2
+ }
+ else
+ {
+     dBlock = parte3
+ }
+ dBlock.style.display = 'block'
+ }
+
+function calcular (){
+    const input = document.getElementById ('mental')
+    const input2 = document.getElementById ('crono')
+    const resul = document.getElementById ('resp')
+    im = Number(input.value)
+    ic = Number(input2.value)
+
+    idadeMental = (im/ic)*100
+
+    if(!im || !ic){
+        window.alert('Introduz dados validos')
+    }
+    else{
+
+        if(idadeMental > 140){
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. És um superdotado!`
+        resul.style.color = 'yellow'
+        resul.style.fontSize = '1.8rem'
+    }
+    else if(idadeMental > 121 && idadeMental < 140){
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia muito superior.`
+        resul.style.fontSize = '1.8rem'
+    }
+    else if(idadeMental > 110 && idadeMental < 121){
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia superior,`
+        resul.style.fontSize = '1.8rem'
+    }
+    else if(idadeMental > 90 && idadeMental <110){
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia média.`
+        resul.style.fontSize = '1.8rem'
+    }
+    else if(idadeMental > 70 && idadeMental < 90){
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia inferior.`
+        resul.style.fontSize = '1.8rem'
+    }
+    else
+    {
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É subnormalidade intelectual.`
+        if(idadeMental > 53 && idadeMental < 69){
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É deficiente mental ligeiro. Necessita de orientação social e profissional.`
+        resul.style.color = 'red'
+        resul.style.fontSize = '1.8rem'
+        }
+        else if(idadeMental > 36 && idadeMental < 52){
+        resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É deficiente mental moderado. Exige cuidadosa vigilância e orientação.`
+        resul.style.color = 'red'
+        resul.style.fontSize = '1.8rem'
+        }
+        else if(idadeMental > 20 && idadeMental < 35){
+            resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É deficiente mental grave. Necessita de uma completa vigilância.`
+            resul.style.color = 'red'
+            resul.style.fontSize = '1.8rem'
+
+        }
+        else{
+            resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É deficiente mental profundo. Necessita de um acompanhamento a tempo inteiro para sua sobrevivência.`
+            resul.style.color = 'red'
+            resul.style.fontSize = '1.8rem'
+        }
+
+    }
+    go (2, 3)
+  
+
+    }
+   
+    
+}
+
+    </script>
+    </html>
