@@ -484,7 +484,50 @@ h2{
     }
 }
 
-/*CODIGO CSS DO PROJECTO 1*/
+/*CODIGO CSS DO PROJECTO 1, 2 e 3*/
+.myProject{
+    text-align: center;
+    position: relative;
+    margin-bottom: 20%; 
+    font-size: 2rem;
+}
+
+#myProject{
+    color: var(--color-wthite);
+    text-decoration: none;
+    position: absolute;
+    margin-top: 50%;
+    left: 6%; 
+}
+#myProject:hover{
+    text-decoration: underline;
+    color: var(--color-grey-2);
+}
+#myProject2{
+    color: var(--color-wthite);
+    text-decoration: none;
+    position: absolute;
+    margin-top: 50%;
+    left: 6%; 
+}
+#myProject2:hover{
+    text-decoration: underline;
+    color: var(--color-grey-2);
+}
+#myProject3{
+    color: var(--color-wthite);
+    text-decoration: none;
+    position: absolute;
+    margin-top: 50%;
+    left: 6%; 
+}
+#myProject3:hover{
+    text-decoration: underline;
+    color: var(--color-grey-2);
+}
+
+
+
 
 
 

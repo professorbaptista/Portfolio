@@ -4,11 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projecto Quociente de inteligência</title>
+        <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="projeto3.css">
         <script src="estilo.js"></script>
     </head>
     <body>
-        <h2>José Baptista, Professor, Psicologo e Desenvolvidor web.</h2>
+    <div class="main-title">
+        <h2> Desenvolvidor <span class="mim">Front-End</span> <span class="
+           big-text">Autodidata</span>  </h2>
+   </div>
+        <!-- <h2>José Baptista, Professor, Psicologo e Desenvolvidor web.</h2> -->
     
         <div class="container">
     
@@ -97,24 +102,28 @@ function calcular (){
 
         if(idadeMental > 140){
         resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. És um superdotado!`
-        resul.style.color = 'yellow'
+        resul.style.color = 'green'
         resul.style.fontSize = '1.8rem'
     }
     else if(idadeMental > 121 && idadeMental < 140){
         resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia muito superior.`
         resul.style.fontSize = '1.8rem'
+        resul.style.color = 'green'
     }
     else if(idadeMental > 110 && idadeMental < 121){
         resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia superior,`
         resul.style.fontSize = '1.8rem'
+        resul.style.color = 'yellow'
     }
     else if(idadeMental > 90 && idadeMental <110){
         resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia média.`
         resul.style.fontSize = '1.8rem'
+        resul.style.color = 'yellow'
     }
     else if(idadeMental > 70 && idadeMental < 90){
         resul.innerHTML = `O seu Q.I calculado é igual a ${idadeMental}. É de inteligencia inferior.`
         resul.style.fontSize = '1.8rem'
+        resul.style.color = 'blue'
     }
     else
     {
